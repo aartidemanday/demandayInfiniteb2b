@@ -30,7 +30,7 @@ const topCategory = useSelector(state=>state.category.category)
     dispatch(fetchCategories(dispatch));
     // fetchCategory();
   }, [])
-// console.log("topCategory",topCategory)
+console.log("topCategory",topCategory)
 
   // img click function 
   const handleImageClick = (category) => { 
@@ -103,7 +103,7 @@ const topCategory = useSelector(state=>state.category.category)
               alt={images[index < 10 ? index : 0].alt} 
               className="cursor-pointer w-full h-full object-cover"
             />
-            <div className="cursor-pointer absolute inset-0 bg-gradient-to-r from-teal-400 to-purple-500 opacity-40"></div>
+            <div className="cursor-pointer absolute inset-0  from-teal-400 to-purple-500 opacity-40"></div>
             <div className="absolute bottom-2 left-2 text-white opacity-100 transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:translate-x-2">
               <p className="font-montserrat cursor-pointer flex text-lg font-bold group-hover:text-xl group-hover:font-semibold transition-all duration-300 ease-in-out mt-1">
                 {category.name}     

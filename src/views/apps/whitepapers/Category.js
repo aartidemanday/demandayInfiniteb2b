@@ -113,13 +113,13 @@ const Category = () => {
       </div>
     </div>
   </div>
-  <div className="bg-teal-700 w-[100%] p-4 flex justify-between items-center rounded-md">
-    {/* Left Side Text */}
+  {/* <div className="bg-teal-700 w-[100%] p-4 flex justify-between items-center rounded-md">
+   
     <div className="text-white text-xl font-semibold">
         113 SOLUTIONS
     </div>
     
-    {/* Right Side Search Box */}
+
     <div className="flex items-center bg-white rounded-full px-4 py-2 w-full max-w-xs">
         <input
             type="text"
@@ -128,7 +128,24 @@ const Category = () => {
         />
         <Search className="text-gray-500" size={20} />
     </div>
+</div> */}
+<div className="bg-teal-700 w-full p-4 flex flex-col md:flex-row justify-between items-center rounded-md space-y-4 md:space-y-0">
+  {/* Left Side: Solution Count */}
+  <div className="text-white text-lg md:text-xl font-semibold">
+    113 SOLUTIONS
+  </div>
+
+  {/* Right Side: Search Bar */}
+  <div className="flex items-center bg-white rounded-full px-3 py-2 w-full max-w-xs md:max-w-sm">
+    <input
+      type="text"
+      placeholder="Search..."
+      className="bg-transparent outline-none text-gray-700 flex-grow"
+    />
+    <Search className="text-gray-500" size={20} />
+  </div>
 </div>
+
 <PdfPreview/>
 <FeaturedSolution/>
   {/* <div onClick={handleDownload}>
