@@ -1,8 +1,7 @@
-import axios from 'axios';
+
 import React, { useEffect, useState } from 'react';
 import { Bell, ChevronRight, Home, Search } from 'react-feather';
 import { Link, useNavigate } from 'react-router-dom';
-// import { fetchCategories } from '../../../app/services/categoryAction';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCategories, fetchCategoriesByLetter, searchCategories } from '../../../app/servies/categoryAction';
 
@@ -58,27 +57,19 @@ const topCategory = useSelector(state=>state.category.category)
         }))
     }
   }
-  // Filtered images based on search and filter 
-  // const filteredImages = images.filter((image) => {
-  //   const matchesLetter = letterFilter ? image.title.startsWith(letterFilter) : true;
-  //   const matchesSearch = searchQuery
-  //     ? image.title.toLowerCase().includes(searchQuery.toLowerCase())
-  //     : true;
-  //   return matchesLetter && matchesSearch;
-  // });
 
   return (
     <>
       <header className="w-full bg-white shadow-lg rounded-lg p-3 px-4"> 
         <div className="flex items-center gap-2 text-[#4702a2]">
           <Link to="/home">
-            <Home className="text-[#4702a2]" size={20} />
+            <Home className="text-gray-700" size={20} />
           </Link>
-          <ChevronRight className="text-[#4702a2]" size={20} />
-          <Link to="/whitepapers" className="text-sm hover:underline">
+          <ChevronRight className="text-gray-700" size={20} />
+          <Link to="/whitepapers" className="text-gray-700 text-sm no-underline">
             WHITEPAPERS
           </Link>
-          <ChevronRight className="text-[#4702a2]" size={20} />
+          <ChevronRight className="text-gray-700" size={20} />
         </div>
       </header>
       
@@ -116,7 +107,7 @@ const topCategory = useSelector(state=>state.category.category)
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 m-2 mt-4 p-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 m-2 mt-4 p-2 place-items-center">
         {categoryData ? <> {categoryData?.map((category, index) => (
           <div 
             key={category.id} 

@@ -25,16 +25,6 @@ const Category = () => {
  },[state])
 
   const { imgSrc, description, solutions } = categoryData[category] || {};
-
-
-    const handleDownload = () => {     
-      const fileUrl = '../../../assets/enterprise-augmented-reality-improves-manufacturing-efficiency.pdf';      
-      const fileName = 'downloaded-file.pdf';
-      const link = document.createElement('a');
-      link.href = fileUrl;
-      link.download = fileName;
-      link.click();
-    };
   
   console.log("imgsrc",imgSrc)
   console.log("selectedCategory",selectedCategory.bannerImage)
@@ -42,100 +32,54 @@ const Category = () => {
     <>
     
        <header className="w-full bg-white shadow-lg rounded-lg p-3 px-4">
-      <div className="flex items-center gap-2 text-[#4702a2]">
+      <div className="flex items-center gap-2 text-gray-700">
         <Link to="/home">
-          <Home className="text-[#4702a2]" size={20} />
+          <Home className="text-gray-700" size={20} />
         </Link>
-        <ChevronRight className="text-[#4702a2]" size={20} />
-        <Link to="/whitepapers" className="text-sm hover:underline">
+        <ChevronRight className="text-gray-700" size={20} />
+        <Link to="/whitepapers" className="text-sm text-gray-700 no-underline">
           WHITEPAPERS
         </Link>
-        <ChevronRight className="text-[#4702a2]" size={20} />
-        <Link to={`/category/${category}`} className="text-sm hover:underline">
+        <ChevronRight className="text-gray-700" size={20} />
+        <Link to={`/category/${category}`} className="text-gray-700 text-sm no-underline">
           CATEGORY
         </Link>
       </div>
     </header>
-    {/* <div className="relative w-full h-[70vh] overflow-hidden p-6 rounded-3xl">
-    {imgSrc && (
-      <img 
-        src={imgSrc} 
-        alt={category} 
-        className="w-full h-full object-cover rounded-3xl"
-      />
-    )}
-    <div className="absolute inset-0 bg-opacity-90 p-6 sm:p-8 flex flex-col justify-end rounded-3xl">
-      <div className="text-white space-y-2 w-full sm:w-2/3 mb-4">
-        <h1 className="text-2xl sm:text-4xl font-bold">{category}</h1>
-        <p className="text-sm sm:text-base">
-          {description || "Description not available."}
-        </p>
-      </div>
-      <div className="flex items-center w-full">
-        <button className="px-4 py-2 bg-teal-500 text-white rounded-full text-sm sm:text-base hover:bg-teal-600">
-          Subscribe
-        </button>
-        <div className="text-white text-sm sm:text-base ml-4">
-           {solutions} Solutions
-        </div>
-      </div>
-    </div>
-  </div> */}
+
   <div className='p-3'>
-   <div className="relative w-full h-[70vh] overflow-hidden p-6 rounded-3xl">
+   <div className="object-contain relative w-full h-[70vh] overflow-hidden p-6 rounded-3xl">
     {selectedCategory.bannerImage && (
       <img 
         src={selectedCategory.bannerImage} 
         alt={selectedCategory.name} 
-        className="w-full h-full object-cover rounded-3xl"
+        className="w-full h-auto object-cover rounded-3xl"
       />
     )}
-    <div className='absolute w-40 aspect-square inset-0 p-10 justify-start'>
-    <img className="w-[100%] height-[100%] rounded-full border-2 border-white"
-        src={selectedCategory.iconImage} 
-        alt={selectedCategory.name} 
-      />
-    </div>
-    <div className="absolute inset-0 bg-opacity-90 p-6 sm:p-8 flex flex-col justify-end rounded-3xl">
+   
+    <div className="mb-10 absolute inset-0 bg-opacity-90 p-6 sm:p-8 flex flex-col justify-end rounded-3xl">
       <div className="text-white space-y-2 w-full sm:w-2/3 mb-4">
         <h1 className="mx-2 text-2xl sm:text-4xl font-bold">{selectedCategory.name}</h1>
         <p className="mx-2 text-sm sm:text-base">
           {selectedCategory.description || "Description not available."}
         </p>
       </div>
-      <div className="mx-2 mb-2 flex items-center w-full">
+      <div className="absolute mx-2 flex items-center w-full">
         <button className="px-4 py-2 bg-teal-500 text-white rounded-full text-sm sm:text-base hover:bg-teal-600">
           Subscribe
         </button>
         <div className="text-white text-sm sm:text-base ml-4">
-           {selectedCategory.solutionSetCount} Solutions
+           {selectedCategory.solutionSetCount} WHITEPAPERS
         </div>
       </div>
     </div>
   </div>
-  {/* <div className="bg-teal-700 w-[100%] p-4 flex justify-between items-center rounded-md">
-   
-    <div className="text-white text-xl font-semibold">
-        113 SOLUTIONS
-    </div>
-    
 
-    <div className="flex items-center bg-white rounded-full px-4 py-2 w-full max-w-xs">
-        <input
-            type="text"
-            placeholder="Search..."
-            className="bg-transparent outline-none text-gray-700 flex-grow"
-        />
-        <Search className="text-gray-500" size={20} />
-    </div>
-</div> */}
 <div className="bg-teal-700 w-full p-4 flex flex-col md:flex-row justify-between items-center rounded-md space-y-4 md:space-y-0">
-  {/* Left Side: Solution Count */}
   <div className="text-white text-lg md:text-xl font-semibold">
     113 SOLUTIONS
   </div>
 
-  {/* Right Side: Search Bar */}
   <div className="flex items-center bg-white rounded-full px-3 py-2 w-full max-w-xs md:max-w-sm">
     <input
       type="text"
@@ -148,9 +92,7 @@ const Category = () => {
 
 <PdfPreview/>
 <FeaturedSolution/>
-  {/* <div onClick={handleDownload}>
-      <Download className="ml-20 transition-all duration-300 ease-in-out cursor-pointer" size={20} />
-    </div> */}
+
     <h3 className='p-3'> Solutions</h3>
     <div className='flex flex-wrap '>
     {featuredSolutionData.map(featureCard=><Card key={featureCard.title} featureCard={featureCard}/>)}

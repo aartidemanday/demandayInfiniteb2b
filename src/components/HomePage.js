@@ -2,13 +2,11 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; 
-import ImgSlider from './ImgSlider';
 import StateSection from './StackSection';
 import CircularDivs from './CircularDivs';
 import TrustedVender from './TrustedVender';
 import Curated from './Curated';
-import FeaturedSolutionf from './FeaturedSolutionf';
-// import StateSection from './StateSection';
+import FeaturedSolutionf from './FeaturedSolutionf';;
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -38,7 +36,7 @@ const HomePage = () => {
             </button>
             <button
               className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-400 transition duration-300" // Lighter shade on hover
-              onClick={() => navigate('/learn-more')} 
+              // onClick={() => navigate('/learn-more')} 
             >
               LEARN MORE
             </button>
@@ -54,7 +52,7 @@ const HomePage = () => {
       {/* <ImgSlider/> */}
       <FeaturedSolutionf/>
       <StateSection />
-      <CircularDivs/>
+      {/* <CircularDivs/> */}
       <TrustedVender/>
       <Curated/>
     </>
