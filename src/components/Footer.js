@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'; // Import Link for routing
 
 const Footer = () => {
     return (
-        <footer className="bg-gradient-to-r from-gray-800 to-black py-8 text-white relative m-2 px-2">
+        <footer className="bg-gradient-to-r from-gray-800 to-black py-8 text-white relative px-2">
             {/* Background Image */}
             <div 
                 className="absolute inset-0 w-full bg-cover bg-center opacity-20 h-[60%]" 
@@ -69,7 +69,7 @@ const Footer = () => {
 
             {/* Bottom Section */}
             <div className="container mx-auto text-center mt-4">
-                <span className="text-gray-400">&copy;2024 Contentree. All Rights Reserved | Privacy and Cookies | Legal | Do not sell my info</span>
+                <span className="text-gray-400">&copy;2024 InfiniteB2B. All Rights Reserved | Privacy and Cookies | Legal | Do not sell my info</span>
             </div>
         </footer>
     );

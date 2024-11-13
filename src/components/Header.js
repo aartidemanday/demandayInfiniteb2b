@@ -166,7 +166,7 @@ const Header = () => {
     const navigate = useNavigate();
     const [menuOpen, setMenuOpen] = useState(false);
 
-    // Close the menu when clicking outside
+    
     const handleClickOutside = (e) => {
         if (!e.target.closest('.menu-container') && !e.target.closest('.mr-1')) {
             setMenuOpen(false);
@@ -179,7 +179,7 @@ const Header = () => {
     }, []);
 
     return (
-        <header className="bg-gradient-to-r from-teal-500 to-[#4702a2] m-2 px-2">
+        <header className="bg-gradient-to-r from-teal-500 to-[#4702a2] px-2">
             <div className="mx-auto p-2">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center space-x-4">
@@ -214,7 +214,7 @@ const Header = () => {
                             </button>
                             <button 
                                 className="text-white hover:underline"
-                                onClick={() => navigate('/newsletter')}
+                                onClick={() => navigate('/newsletters')}
                             >
                                 Newsletter
                             </button>

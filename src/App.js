@@ -13,6 +13,7 @@ import CountryDetails from './views/apps/solutionSets/CountryDetails_old';
 import Login from './pages/Login';
 import Category from './views/apps/whitepapers/Category';
 import Whitepapers from './views/apps/whitepapers';
+import Newsletters from './views/apps/newsletters/Newsletters';
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
                         <Route path="/" element={<HomePage />} />
                         <Route path="/whitepapers" element={<Whitepapers />} />
                         <Route path="/whitepaper" element={<SolutionSet />} />
+                        <Route path="/newsletters" element={<Newsletters />} />
                        
                         <Route path="/get-started" element={<GetStartedPage />} />
                         <Route path="/learn-more" element={<LearnMorePage />} />

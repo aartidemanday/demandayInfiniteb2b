@@ -26,7 +26,7 @@ const Header = () => {
                             onClick={() => navigate('/whitepapers')}>
                            WhitePapers
                         </button>
-                        <button className="border border-gray-600 text-gray-600 px-4 py-2 rounded hover:bg-gray-600 hover:text-white">
+                        <button className="border border-gray-600 text-gray-600 px-4 py-2 rounded hover:bg-gray-600 hover:text-white"   onClick={() => navigate('/newsletters')}>
                             Newsletter
                         </button>
                         <button

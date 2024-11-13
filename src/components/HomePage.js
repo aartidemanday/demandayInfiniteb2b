@@ -49,7 +49,7 @@ const HomePage = () => {
       <div className="text-black text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 lg:mb-8 mx-4 md:mx-10 text-center m-6 md:m-14">
 
 
-  END-TO-END B2B SOLUTIONS SERVING <br/>  all INDUSTRIES, VENDORS, AND <br /> PRODUCT NEEDS.
+  END-TO-END B2B SOLUTIONS SERVING <br/>  ALL INDUSTRIES, VENDORS, AND <br /> PRODUCT NEEDS.
 </div>
       {/* <ImgSlider/> */}
       <FeaturedSolutionf/>

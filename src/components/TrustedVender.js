@@ -51,6 +51,76 @@ const TrustedVender = () => {
             alt="Image 5"
             className="w-64 h-48 object-cover rounded-lg shadow-lg"
           />
+          <img
+            src={require('../assets/img/scoller/1.jpg')}
+            alt="Image 1"
+            className="w-64 h-48 object-cover rounded-lg shadow-lg"
+          />
+          <img
+            src={require('../assets/img/scoller/2.jpg')}
+            alt="Image 2"
+            className="w-64 h-48 object-cover rounded-lg shadow-lg"
+          />
+          <img
+            src={require('../assets/img/scoller/3.jpg')}
+            alt="Image 3"
+            className="w-64 h-48 object-cover rounded-lg shadow-lg"
+          />
+          <img
+            src={require('../assets/img/scoller/4.jpg')}
+            alt="Image 4"
+            className="w-64 h-48 object-cover rounded-lg shadow-lg"
+          />
+          <img
+            src={require('../assets/img/scoller/5.jpg')}
+            alt="Image 5"
+            className="w-64 h-48 object-cover rounded-lg shadow-lg"
+          />
+              <img
+            src={require('../assets/img/scoller/2.jpg')}
+            alt="Image 2"
+            className="w-64 h-48 object-cover rounded-lg shadow-lg"
+          />
+          <img
+            src={require('../assets/img/scoller/3.jpg')}
+            alt="Image 3"
+            className="w-64 h-48 object-cover rounded-lg shadow-lg"
+          />
+          <img
+            src={require('../assets/img/scoller/4.jpg')}
+            alt="Image 4"
+            className="w-64 h-48 object-cover rounded-lg shadow-lg"
+          />
+          <img
+            src={require('../assets/img/scoller/5.jpg')}
+            alt="Image 5"
+            className="w-64 h-48 object-cover rounded-lg shadow-lg"
+          />
+          <img
+            src={require('../assets/img/scoller/1.jpg')}
+            alt="Image 1"
+            className="w-64 h-48 object-cover rounded-lg shadow-lg"
+          />
+          <img
+            src={require('../assets/img/scoller/2.jpg')}
+            alt="Image 2"
+            className="w-64 h-48 object-cover rounded-lg shadow-lg"
+          />
+          <img
+            src={require('../assets/img/scoller/3.jpg')}
+            alt="Image 3"
+            className="w-64 h-48 object-cover rounded-lg shadow-lg"
+          />
+          <img
+            src={require('../assets/img/scoller/4.jpg')}
+            alt="Image 4"
+            className="w-64 h-48 object-cover rounded-lg shadow-lg"
+          />
+          <img
+            src={require('../assets/img/scoller/5.jpg')}
+            alt="Image 5"
+            className="w-64 h-48 object-cover rounded-lg shadow-lg"
+          />
           {/* Duplicate images for seamless scroll */}
           {/* <img
             src={require('../assets/img/scoller/1.jpg')}
