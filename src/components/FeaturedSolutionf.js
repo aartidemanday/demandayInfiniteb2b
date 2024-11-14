@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'react-feather';
 import { featuredSolutionData } from '../views/apps/solutionSets/enum';
@@ -17,13 +19,13 @@ const FeaturedSolutionf = () => {
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === featuredSolutionData.length - (isMobile ? 1 : 4) ? 0 : prevIndex + 1
+      prevIndex === featuredSolutionData.length - (isMobile ? 1 : 2) ? 0 : prevIndex + 1
     );
   };
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? featuredSolutionData.length - (isMobile ? 1 : 4) : prevIndex - 1
+      prevIndex === 0 ? featuredSolutionData.length - (isMobile ? 1 : 2) : prevIndex - 1
     );
   };
 

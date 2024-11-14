@@ -103,11 +103,15 @@ const Curated = () => {
         {/* Text Section */}
         <div className="m-4 lg:mt-4 lg:w-2/5 flex-col justify-center items-center">
         <span className="lg:mt-20 text-2xl font-bold bg-clip-text text-[#4702a2] md:text-3xl lg:text-4xl">
-    CURATED WHITEPAPERS
-  </span>
-          <p className="flex m-4 justify-center items-center text-lg md:text-2xl lg:text-lg text-left leading-relaxed tracking-wide mx-2">
+    {/* CURATED WHITEPAPERS
+     */}
+     {/* Explore Topics That Matter to You */}
+     EXPLORE TOPICS THAT MATTER TO YOU
 
-            Save time with our expertly curated collection of proven solutions to industry challenges, designed to streamline your workflow, enhance productivity, and accelerate your success. Unlock the power of innovation with resources that are tailored to solve your unique problems and drive sustainable growth.
+  </span>
+          <p className="flex m-2 my-3 text-lg md:text-2xl lg:text-lg text-left leading-relaxed tracking-wide">
+          Stay Ahead with Key B2B Topics.!
+            {/* Save time with our expertly curated collection of proven solutions to industry challenges, designed to streamline your workflow, enhance productivity, and accelerate your success. Unlock the power of innovation with resources that are tailored to solve your unique problems and drive sustainable growth. */}
           </p>
           <button
             className="lg:w-1/4 w-auto py-2 bg-[#4702a2] text-white rounded-2xl p-4"

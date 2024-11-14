@@ -1,11 +1,11 @@
 import React from 'react';
-import { Facebook, Twitter, Linkedin, Upload } from 'react-feather'; // Import Feather icons
-import { Link } from 'react-router-dom'; // Import Link for routing
+import { Facebook, Twitter, Linkedin, Upload } from 'react-feather'; 
+import { Link } from 'react-router-dom'; 
 
 const Footer = () => {
     return (
-        <footer className="bg-gradient-to-r from-gray-800 to-black py-8 text-white relative px-2">
-            {/* Background Image */}
+        <footer className="bg-gradient-to-r from-gray-800 to-black py-8 text-white relative px-2 mt-6">
+            
             <div 
                 className="absolute inset-0 w-full bg-cover bg-center opacity-20 h-[60%]" 
                 style={{ backgroundImage: `url(${require('../assets/img/Img5.jpg')})` }}
