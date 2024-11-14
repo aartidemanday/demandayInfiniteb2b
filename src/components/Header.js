@@ -10,7 +10,8 @@ const Header = () => {
 
     const token = useSelector(state=>state.user.token)
     const username = useSelector(state=>state.user.username)
-
+    // const name = useSelector(state=>state.user.name)
+// console.log("user..........", name)
     const handleClickOutside = (e) => {
         if (!e.target.closest('.menu-container') && !e.target.closest('.mr-1')) {
             setMenuOpen(false);
@@ -71,24 +72,24 @@ const Header = () => {
                         </div>
                     </div>
 
-                    <div className="relative text-white">
+          { token &&         <div className="relative text-white">
                         <Bell className="h-5 w-5 cursor-pointer" />
                         <div className="font-poppins absolute -top-2 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
                             3
                         </div>
-                    </div>
+                    </div>}
 
-                 { token && <div className="flex items-center space-x-2 text-white ">
-                        <div className="bg-[#4702a2]  p-[2px] rounded-full">
+                 { token && <div className="flex items-center space-x-2">
+                        <div className="p-[2px] rounded-full">
                             {/* <img 
                                 src={require('../assets/img/aarti3.jpeg')} 
                                 alt="User" 
                                 className="h-8 w-8 rounded-full object-cover" 
                             /> */}
-                            <User  className="rounded-full text-white" />
+                            <User  className="rounded-full text-gray-400 bg-gray-50" />
                         </div>
                         <div className="flex items-center space-x-1">
-                            <span className="text-white font-semibold font-poppins">{username}</span>
+                            <span className="text-white font-semibold font-poppins">{username} </span>
                             <ChevronDown className="w-5 h-5" />
                         </div>
                     </div>}
