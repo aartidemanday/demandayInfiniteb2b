@@ -1,9 +1,10 @@
 
+
 import React, { useState } from 'react';
 import {  Mail, Lock, User, Phone, Briefcase, Home, Link } from 'react-feather';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser, signupUser } from '../app/servies/userAction';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { ErrorModal } from '../components/ErrorModal';
 
 const LoginSignin = () => {
@@ -27,12 +28,15 @@ const LoginSignin = () => {
   const [signUpErrors, setSignUpErros] = useState({})
   const [verifyEmail, setVerifyEmail] = useState("")
   const dispatch = useDispatch();
+
   const toggleSignUp = () => setIsSignUp(!isSignUp);
   const handleCountryCodeChange = (e) => {
     // console.log(e.target.value)
     setSignUpCreadentials({...signUpCreadentials,country:e.target.value.split(" ")[1]})
     setCountryCode(e.target.value.split(" ")[0]);
   };
+  const location = useLocation();
+  const { pathname } = location;
   const navigate= useNavigate()
   const handleCredentialChange = (e)=>{
     const {name,value} = e.target
@@ -64,7 +68,7 @@ const LoginSignin = () => {
           setErrorMsg(res)
         }
         else{
-          navigate("/")
+          navigate(pathname)
           setErrorMsg("")
         }
       }))

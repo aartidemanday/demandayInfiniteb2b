@@ -103,7 +103,7 @@ const topCategory = useSelector(state=>state.category.category)
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <Search onClick={handleSearch} className="mr-2" size={20} />
+          <Search onClick={handleSearch} className="mr-2 cursor-pointer" size={20} />
         </div>
       </div>
 

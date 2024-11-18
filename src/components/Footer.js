@@ -49,7 +49,7 @@ const Footer = () => {
                         <li><Link className='no-underline text-white cursor-pointer' to="#">Blogs</Link></li>
                         <li><Link className='no-underline text-white cursor-pointer' to="#">Vendor Centers</Link></li>
                         <li><Link className='no-underline text-white cursor-pointer' to="/whitepapers">WhitePapers</Link></li>
-                        <li><Link className='no-underline text-white cursor-pointer' to="#">About us</Link></li>
+                        <li><Link className='no-underline text-white cursor-pointer' to="/aboutus">About us</Link></li>
                         <li><Link className='no-underline text-white cursor-pointer' to="#">Contact us</Link></li>
                     </ul>
                 </div>

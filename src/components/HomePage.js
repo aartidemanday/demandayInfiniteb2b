@@ -80,7 +80,8 @@ const HomePage = () => {
       <div className="relative flex h-screen">
         <div className="w-full h-full flex justify-center items-center">
           <video 
-            src={require('../assets/AiV5.mp4')}
+            // src={require('../assets/AiV5.mp4')}
+            src={require('../assets/new.mp4')}
             autoPlay
             loop
             muted
@@ -89,8 +90,9 @@ const HomePage = () => {
         </div>
         {/* Overlay for the title and buttons */}
         <div className="absolute inset-0 flex flex-col justify-center items-start text-left p-10">
-  <h1 className="text-white text-6xl font-bold mb-0 leading-none">SOLUTIONS FOR EVERY BUSINESS</h1>
-  <h1 className="text-white text-6xl font-bold mb-4 leading-none"> CHALLENGE</h1>
+  <h1 className="text-white text-6xl font-bold mb-0 leading-none">SOLUTIONS FOR EVERY</h1>
+  <h1 className="text-white text-6xl font-bold mb-4 leading-none">  BUSINESS CHALLENGE</h1>
+  <p className='text-white'>Access 600+ industries, connect with thousands of vendors, and uncover insights that propel your business forward</p>
   <div className="flex space-x-4 mt-4">
     <button
       className="bg-[#4702a2] text-white px-6 py-2 rounded hover:bg-[rgb(147,101,203)] transition duration-300"
@@ -108,23 +110,7 @@ const HomePage = () => {
 
       </div>
    <Section2home/>
-{/*  
-<div>
-<h1 className="mt-4 text-[#4702a2] text-3xl md:text-5xl lg:text-4xl font-bold mx-2 text-center">
- 
-  POWERING YOUR BUSINESS WITH IN-DEPTH BB2 RESOURCES
 
-</h1>
-<p className="flex justify-center items-center text-lg md:text-2xl lg:text-lg text-left leading-relaxed tracking-wide mx-2">
-
-Leverage our extensive platform to access the best whitepapers for your needs. 
-</p><div className='flex w-full'>
-
- <FeaturedSolutionf/>
-
-       
-        </div>
-</div> */}
 
 
       {/* <ImgSlider/> */}

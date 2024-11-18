@@ -14,7 +14,10 @@ import Login from './pages/Login';
 import Category from './views/apps/whitepapers/Category';
 import Whitepapers from './views/apps/whitepapers';
 import Newsletters from './views/apps/newsletters/Newsletters';
-
+import AboutUs from './pages/AboutUs';
+import ProtectedRoute from './components/ProtectedRoute';
+import ViewCaseStudy from './pages/ViewCaseStudy' 
+import CaseStudy from './pages/CaseStudy'
 
 const App = () => {
     return (
@@ -23,19 +26,24 @@ const App = () => {
                 <Header />
                 <main className="flex-grow">
                     <Routes>
+                    <Route element={<ProtectedRoute/>}>
+                        <Route path="/view-casetudy/:id" element={<ViewCaseStudy />} />  
+
+                        </Route>
                         <Route path="/login" element={<Login />} />
                         <Route path="/Home" element={<HomePage />} />
                         <Route path="/" element={<HomePage />} />
                         <Route path="/whitepapers" element={<Whitepapers />} />
                         <Route path="/whitepaper" element={<SolutionSet />} />
                         <Route path="/newsletters" element={<Newsletters />} />
+                        <Route path="/aboutus" element={<AboutUs />} />
                        
                         <Route path="/get-started" element={<GetStartedPage />} />
                         <Route path="/learn-more" element={<LearnMorePage />} />
                         <Route path="/country/:countryName" element={<CountryDetails />} />
                         
-                        {/* Add route for dynamic category */}
                         <Route path="/category/:category" element={<Category />} />  {/* This is the new category route */}
+                        <Route path="/casestudy/:id" element={<CaseStudy />} />
                     </Routes>
                 </main>
                 <Footer />

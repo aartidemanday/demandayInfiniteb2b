@@ -16,7 +16,7 @@ export const useSlice = createSlice({
     console.log("username",username)
     console.log("jwtToken ",jwtToken)
       state.username = username
-      state.jwtToken = jwtToken
+      state.token = jwtToken
       sessionStorage.setItem("token",jwtToken)
       sessionStorage.setItem("user",username)
     },
@@ -25,10 +25,15 @@ export const useSlice = createSlice({
     },
     setError:(state,action) => {
       state.loading = action.payload
+    },
+    clearUser:(state,action) => {
+      state.username = ""
+      state.token=""
+      sessionStorage.clear()
     }
   },
 })
 
-export const { setUser } = useSlice.actions
+export const { setUser, clearUser } = useSlice.actions
 
 export default useSlice.reducer
