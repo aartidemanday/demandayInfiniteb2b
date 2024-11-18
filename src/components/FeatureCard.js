@@ -1,5 +1,5 @@
 import React from 'react'
-import { Bookmark } from 'react-feather'
+import { Bell, Bookmark } from 'react-feather'
 
 const FeatureCard = ({featureCard,display}) => {
   return (
@@ -12,7 +12,7 @@ const FeatureCard = ({featureCard,display}) => {
               </div>
               <div className="flex justify-between items-center p-4 bg-gray-100">
                 <h4 className="text-lg font-semibold line-clamp-1">{featureCard.title}</h4>
-                <Bookmark size={20} className="text-[#4702a2]"/>
+                <Bell size={20} className="text-[#4702a2]"/>
               </div>
             </div>
           </div>

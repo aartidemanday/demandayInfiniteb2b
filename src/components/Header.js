@@ -51,9 +51,9 @@ const Header = () => {
             </button>
             <button
               className="text-white hover:underline font-poppins"
-              onClick={() => navigate("/whitepapers")}
+              onClick={() => navigate("/whitepapers-set")}
             >
-              WHITEPAPERSET
+              WHITEPAPER SET
             </button>
             <button
               className="text-white hover:underline font-poppins"

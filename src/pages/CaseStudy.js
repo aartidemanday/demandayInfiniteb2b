@@ -1,6 +1,6 @@
 import { Viewer } from '@react-pdf-viewer/core';
 import React from 'react'
-import { Bookmark, ChevronRight, Download, Home, Share, Share2 } from 'react-feather';
+import { Bell, Bookmark, ChevronRight, Download, Home, Share, Share2 } from 'react-feather';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import FeaturedSolution from '../components/FeaturedSolution';
 import axios from 'axios'
@@ -21,7 +21,7 @@ const config = {
     'Authorization': `Bearer ${token}`,
   }
 };
-  const data = await axios.get("http://141.136.35.203:8080/api/user/download-pdf?id=16",config)
+  const data = await axios.get("https://141.136.35.203:8443/api/user/download-pdf?id=16",config)
 
   console.log("pdfData",data.data)
 }
@@ -35,7 +35,7 @@ const config = {
   }
 };
 try {
-  const data = await axios.get("http://141.136.35.203:8080/api/user/view-pdf?id=16",config)
+  const data = await axios.get("https://141.136.35.203:8443/api/user/view-pdf?id=16",config)
   console.log("pdfData",data)
 } catch (error) {
     console.log("error",error)
@@ -94,7 +94,7 @@ try {
             </div>
           <div className='flex justify-end lg:flex-col gap-3 order-3 lg:order-1'>
             <Download onClick={downloadPdf} className='text-[#4702a2] cursor-pointer' size={30} />
-            <Bookmark onClick={fetchPdf} className='text-[#4702a2] cursor-pointer' size={30} />
+            <Bell onClick={fetchPdf} className='text-[#4702a2] cursor-pointer' size={30} />
             <Share2 className='text-[#4702a2] cursor-pointer' size={30} />
           </div>
         </div>

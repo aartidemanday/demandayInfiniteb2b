@@ -11,7 +11,7 @@ const config = {
 export const fetchCategories = (dispatch,callback) => async () => {
 
     try {
-      const res = await axios.get("http://infiniteb2b.com:8080/api/category",config)
+      const res = await axios.get("https://infiniteb2b.com:8443/api/category",config)
       callback(res.data.data)
       dispatch(setTopCategory(res.data.data))
     } catch (error) {
@@ -20,7 +20,7 @@ export const fetchCategories = (dispatch,callback) => async () => {
 };
 export const fetchCategoriesByLetter = (letter,callback) => async () => {
     try {
-      const res = await axios.get(`http://infiniteb2b.com:8080/api/category?filter=${letter}`,config)
+      const res = await axios.get(`https://infiniteb2b.com:8443/api/category?filter=${letter}`,config)
       return callback(res.data.data)
     } catch (error) {
         console.log("error",error)
@@ -28,7 +28,7 @@ export const fetchCategoriesByLetter = (letter,callback) => async () => {
 };
 export const searchCategories = (searchQuery,callback) => async () => {
     try {
-      const res = await axios.get(`http://infiniteb2b.com:8080/api/category?name=${searchQuery}`,config)
+      const res = await axios.get(`https://infiniteb2b.com:8443/api/category?name=${searchQuery}`,config)
       return callback(res.data.data)
     } catch (error) {
         console.log("error",error)

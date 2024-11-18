@@ -9,7 +9,7 @@ const config = {
 
 export const loginUser = (body,dispatch,callback) => async () => {
     try {
-      const res = await axios.post("http://141.136.35.203:8080/api/user/login",body,config)
+      const res = await axios.post("https://141.136.35.203:8443/api/user/login",body,config)
       callback(res.data.data)
       dispatch(setUser(res.data.data))
     } catch (error) {
@@ -20,7 +20,7 @@ export const loginUser = (body,dispatch,callback) => async () => {
 };
 export const signupUser = (body,callback) => async () => {
     try {
-      const res = await axios.post("http://141.136.35.203:8080/api/user/register",body,config)
+      const res = await axios.post("https://141.136.35.203:8443/api/user/register",body,config)
       callback(res)
     } catch (error) {
         console.log("error",error?.response?.data?.message)
